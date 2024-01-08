@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Блог &#8470; 415</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="d-flex justify-content-end mb-3">
+            <button type="button" id="CreatePostBtn" class="btn btn-primary">Написать пост</button>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Фильтрация</h5>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="authorSearch" class="form-label">Поиск по имени автора</label>
+                                <input type="input" class="form-control" id="authorSearch" placeholder="Введите имя автора">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="tagSearch" class="form-label">Поиск по тегам</label>
+                                <select class="form-select" id="tagSearch" multiple>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="sortPostsSelect" class="form-label">Сортировка постов</label>
+                            <select class="form-select" id="sortPostsSelect">
+                                <option value="CreateDesc">По дате создания (сначала новые)</option>
+                                <option value="CreateAsc">По дате создания (сначала старые)</option>
+                                <option value="LikeDesc">По количеству лайков (по убыванию)</option>
+                                <option value="LikeAsc">По количеству лайков (по возрастанию)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="readTimeMin" class="form-label">Время чтения от</label>
+                                    <input type="input" class="form-control" id="readTimeMin">
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="readTimeMax" class="form-label">Время чтения до</label>
+                                    <input type="input" class="form-control" id="readTimeMax">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex align-items-end justify-content-end">
+                            <div class="form-check me-2 mb-2">
+                                <input class="form-check-input" type="checkbox" value="" id="onlyMyGroups">
+                                <label class="form-check-label" for="onlyMyGroups">Только мои группы</label>
+                            </div>
+                            <button type="button" id="ApplyBtn" class="btn btn-primary ms-2">Применить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script type="module" src="/MainPage.js"></script>
+</body>
+</html>
